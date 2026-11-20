@@ -1,0 +1,6 @@
+Retro Hex Colour 
+01204E - Dark Blue
+028391 - Light Blue
+F6DCAC - Beige
+FAA868 - Peach
+F85525 - Orange

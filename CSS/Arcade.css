@@ -1,0 +1,737 @@
+@font-face {
+  font-family: "Gothic Century";
+  src: url(Fonts/PressStart2P-vaV7.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: 'Gothic Century';
+  background-color: black;
+  background-image: url("Arcade Background screen medium.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+  width: 60vw;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.film-button {
+  text-align: center;
+  font-size: 30px;
+  color: blue;
+  background-color: antiquewhite;
+}
+
+.film-button a{
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.film-button:hover {
+  background-color: rgb(4, 40, 40);
+}
+
+.film-button:hover a{
+  color: aqua;
+}
+
+.music-button {
+  text-align: center;
+  font-size: 30px;
+
+  color: black;
+  background-color: white;
+}
+
+.music-button a{
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.music-button:hover {
+  background-color: #a93612;
+}
+
+.music-button:hover a{
+  color: #f44e1c;
+}
+
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.image-transition {
+  width: 100%;
+  height: 120vh;
+  object-fit: cover;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.image {
+  width: 100%;
+  height: 120vh;
+  object-fit: cover;
+  opacity: 1;
+  position: absolute;
+  pointer-events: none;
+}
+
+@keyframes outline-flasher-film {
+  0%{border-color: rgb(29, 188, 161);}
+  5%{border-color: black;}
+  10%{border-color: #C5A55EFF;}
+  15%{border-color: black;}
+  20% {border-color: #5BC1C8FF;}
+  25% {border-color: black;}
+  30% {border-color: #5BC1C8FF;}
+  35% {border-color: black;}
+  40% {border-color: #C5A55EFF;}
+  45% {border-color: black;}
+  50% {border-color: #5BC1C8FF;}
+  55% {border-color: black;}
+  60% {border-color: #5BC1C8FF;}
+  65%{border-color: black;}
+  70%{border-color: #5BC1C8FF;}
+  75%{border-color: black;}
+  80%{border-color: #C5A55EFF;}
+  85%{border-color: black;}
+  90%{border-color: #5BC1C8FF;}
+  95%{border-color: black;}
+  100%{border-color: #C5A55EFF;}
+}
+
+@keyframes outline-flasher-music {
+  0%{border-color: #d74417;}
+  5%{border-color: black;}
+  10%{border-color: #faa868;}
+  15%{border-color: black;}
+  20% {border-color: #d74417;}
+  25% {border-color: black;}
+  30% {border-color: #d74417;}
+  35% {border-color: black;}
+  40% {border-color: #faa868;}
+  45% {border-color: black;}
+  50% {border-color: #d74417;}
+  55% {border-color: black;}
+  60% {border-color: #faa868;}
+  65%{border-color: black;}
+  70%{border-color: #d74417;}
+  75%{border-color: black;}
+  80%{border-color: #faa868;}
+  85%{border-color: black;}
+  90%{border-color: #d74417;}
+  95%{border-color: black;}
+  100%{border-color: #faa868;}
+}
+
+.film-icon {
+  width: 30%;
+  transform: rotateX(30deg);
+  top: 5%;
+  left: 34%;
+  opacity: 1;
+  position: absolute;
+} 
+
+.film-icon:hover {
+  background-image: linear-gradient(rgb(20, 146, 146), rgb(13, 83, 83));
+  left: 37%;
+  border-radius: 4px;
+  padding: 10px;
+  opacity: 0;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher-film;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.film-icon2 {
+  width: 30%;
+  transform: rotateX(30deg);
+  top: 5%;
+  left: 34%;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.2s;
+
+}
+
+.film-icon2:hover {
+  background-image: linear-gradient(rgb(20, 146, 146), rgb(13, 83, 83));
+  border-radius: 5px;
+  opacity: 1;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher-film;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.music-icon {
+  width: 30%;
+  transform: rotateX(30deg);
+  opacity: 1;
+  left: 34%;
+  top: 35%;
+  position: absolute;
+}
+
+.music-icon:hover {
+  background-image: linear-gradient(#a93612, #4e1909);
+  border-radius: 5px;
+  opacity: 0;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher-music;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.music-icon-animation {
+  width: 30%;
+  transform: rotateX(30deg);
+  opacity: 0;
+  left: 34%;
+  top: 35%;
+  position: absolute;
+  transition: all 0.2s;
+}
+
+.music-icon-animation:hover {
+  background-image: linear-gradient(#a93612, #4e1909);
+  border-radius: 5px;
+  opacity: 1;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher-music;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#button-animation-pressed-down {
+  width: 100%;
+  height: 120vh;
+  object-fit: cover;
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  animation-name: pressed-down;
+  animation-duration: 1.5s;
+}
+
+
+#button-animation-stationary {
+  width: 100%;
+  height: 120vh;
+  object-fit: cover;
+  position: absolute;
+  pointer-events: none;
+  opacity: 1;   
+  animation-name: stationary;
+
+  animation-delay: 4s;
+}
+
+@keyframes pressed-down {
+  0% {opacity: 1;}
+}
+
+
+@keyframes stationary {
+  0% {opacity: 0;}   
+}
+
+.center-down {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+}
+
+.center-up {
+  position: absolute;
+  top: 20%;
+  left: 47%;
+}
+
+.center-middle {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+}
+
+.center-top {
+  position: absolute;
+  top: 10%;
+  left: 45%;
+}
+
+.center-bottom {
+  position: absolute;
+  top: 50%;
+  left: 44.5%;
+}
+
+.screen {
+  width: 99vw;
+  height: 118vh;
+  size: 100vb;
+  object-fit: cover;
+  position: absolute;
+}
+
+.back-icon {
+  width: 10%;
+  transform: rotateX(30deg);
+  opacity: 1;
+  left: 19%;
+  top: 55%;
+  position: absolute;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.film-icon2:hover {
+  background-image: linear-gradient(rgb(20, 146, 146), rgb(13, 83, 83));
+
+  border-radius: 5px;
+  opacity: 1;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher-film;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+
+.music-icon {
+  width: 30%;
+  transform: rotateX(30deg);
+  opacity: 1;
+  left: 34%;
+  top: 35%;
+  position: absolute;
+}
+
+.music-icon:hover {
+  background-image: linear-gradient(#a93612, #4e1909);
+  border-radius: 5px;
+  opacity: 0;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher-music;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.music-icon-animation {
+  width: 30%;
+  transform: rotateX(30deg);
+  opacity: 0;
+  left: 34%;
+  top: 35%;
+  position: absolute;
+}
+
+.music-icon-animation:hover {
+  background-image: linear-gradient(#a93612, #4e1909);
+  border-radius: 5px;
+  opacity: 1;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher-music;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+
+
+.screen-home {
+  left: -3%;
+  top: -55%;
+  width: 100%;
+  height: 150vh;
+  object-fit: cover;
+  position: absolute;
+}
+
+.back-icon {
+  width: 10%;
+  transform: rotateX(30deg);
+  opacity: 1;
+  left: 19%;
+  top: 55%;
+  position: absolute;
+}
+
+.mask-and-record {
+  width: 15%;
+  opacity: 1;
+  position: absolute;
+  top: 20%;
+  left: 48%;
+  transform: rotateX(30deg);    
+}
+
+.mask-and-record-link {
+  position: absolute;
+  top: 43.5%;
+  left: 29%;
+  width: 25%;
+  transform: rotateX(30deg);
+  z-index: 10;
+}
+
+.mask-and-record-link img {
+  width: 100%;
+}
+
+
+.mask-and-record-link img:hover {
+  background-image: linear-gradient(#2e0e05, #e04317);
+  background-size: auto;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes outline-flasher {
+  0%{border-color: #faa868;}
+  5%{border-color: black;}
+  10%{border-color: #faa868;}
+  15%{border-color: black;}
+  20% {border-color: #faa868;}
+  25% {border-color: black;}
+  30% {border-color: #faa868;}
+  35% {border-color: black;}
+  40% {border-color: #faa868;}
+  45% {border-color: black;}
+  50% {border-color: #faa868;}
+  55% {border-color: black;}
+  60% {border-color: #faa868;}
+  65%{border-color: black;}
+  70%{border-color: #faa868;}
+  75%{border-color: black;}
+  80%{border-color: #faa868;}
+  85%{border-color: black;}
+  90%{border-color: #faa868;}
+  95%{border-color: black;}
+  100%{border-color: #faa868;}
+}
+
+.keyboard-mouse-graphic {
+  width: 13%;
+  opacity: 1;
+  position: absolute;
+  top: 43%;
+  left: 25%;
+  transform: rotateX(30deg);
+}
+
+.keyboard-mouse-graphic-link {
+  width: 19%;
+  opacity: 1;
+  position: absolute;
+  top: 54.5%;
+  left: 20%;
+  transform: rotateX(20deg);
+  z-index: 9;
+}
+
+.keyboard-mouse-graphic-link img {
+  width: 100%;
+}
+
+.keyboard-mouse-graphic-link:hover {
+  z-index: 11;
+}
+
+.keyboard-mouse-graphic-link img:hover {
+  background-image: linear-gradient( #09100e, #2BCDA9FF);
+  background-size: auto;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.playbutton-graphic {
+  width: 12.5%;
+  opacity: 1;
+  position: absolute;
+  top: 56.5%;
+  right: 29.7%;
+  transform: rotateX(30deg);
+}
+
+.playbutton-graphic-link {
+  width: 19%;
+  opacity: 1;
+  position: absolute;
+  top: 54.5%;
+  right: 13%;
+  transform: rotateX(20deg);
+  z-index: 10;
+}
+
+.playbutton-graphic-link img {
+  width: 100%;
+}
+
+.playbutton-graphic-link img:hover {
+  background-image: linear-gradient(rgb(28, 16, 4), rgb(182, 139, 10));
+  background-size: auto;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.game-controller-and-gear {
+  width: 15%;
+  opacity: 1;
+  position: absolute;
+  top: 65%;
+  right: 39%;
+  transform: rotateX(20deg);
+  z-index: 10;
+}
+
+.game-controller-and-gear-link {
+  width: 25%;
+  opacity: 1;
+  position: absolute;
+  top: 66.5%;
+  right: 25%;
+  transform: rotateX(20deg);
+  z-index: 10;
+  }
+
+.game-controller-and-gear-link img {
+  width: 100%;
+}
+
+.game-controller-and-gear-link img:hover {
+  background-image: linear-gradient( rgb(8, 16, 9), rgb(64, 125, 75));
+  background-size: auto;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.header {
+    color: #ae1536;
+    text-align: center;
+    font-size: 2.7vb;
+    font-family: 'Gothic Century';
+    font-weight: bold;
+    padding: 30px;
+    transform: rotateX(30deg);
+    pointer-events: none;
+}
+
+.center-header {
+    position: absolute;
+    top: 65%;
+    left: 53%;
+    transform: translate(-50%, -70%);
+}
+
+
+.web-and-development-button {
+    font-size: 15px;
+    background-color: #ae1536;
+    rotate: x 30deg;
+}
+
+.web-and-development-button a{
+    color: black;
+}
+
+.web-and-development-button:hover {
+    background-color: #e58a29;
+    text-decoration: underline;
+}
+
+.software-development-button {
+    font-size: 15px;
+    background-color: #ae1536;
+    rotate: x 30deg;
+}
+
+.software-development-button a {
+    color: black;
+    background-color: #ae1536;
+}
+
+.software-development-button:hover {
+    background-color: #e58a29;
+    text-decoration: underline;
+}
+
+@keyframes outline-flasher-web-and-app-development {
+  0%{border-color: rgb(18, 195, 243);}
+  5%{border-color: black;}
+  10%{border-color: #f21414;}
+  15%{border-color: black;}
+  20% {border-color: rgb(18, 195, 243);}
+  25% {border-color: black;}
+  30% {border-color: rgb(18, 195, 243);}
+  35% {border-color: black;}
+  40% {border-color: #f21414;}
+  45% {border-color: black;}
+  50% {border-color: rgb(18, 195, 243);}
+  55% {border-color: black;}
+  60% {border-color: #f21414;}
+  65%{border-color: black;}
+  70%{border-color: rgb(18, 195, 243);}
+  75%{border-color: black;}
+  80%{border-color: #f21414;}
+  85%{border-color: black;}
+  90%{border-color: rgb(12, 147, 184);}
+  95%{border-color: rgb(20, 20, 20);}
+  100%{border-color: #f21414;}}
+
+.web-and-development {
+  width: 30%;
+  transform: rotateX(30deg);
+  top: 5%;
+  left: 35%;
+  opacity: 1;
+  position: absolute;
+}
+
+.web-and-development:hover {
+  background-image: linear-gradient(rgb(11, 188, 236), rgb(9, 155, 196));
+  left: 37%;
+  border-radius: 4px;
+  padding: 10px;
+  opacity: 0;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher-web-and-app-development;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.web-and-development-animation {
+  width: 30%;
+  transform: rotateX(30deg);
+  top: 5%;
+  left: 35%;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.1s;
+}
+
+.web-and-development-animation:hover {
+  background-image: linear-gradient(rgb(17, 183, 229), rgb(9, 141, 178));
+  border-radius: 5px;
+  opacity: 1;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher-web-and-app-development;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes outline-flasher-software-development {
+  0%{border-color: rgb(60, 230, 216);}
+  5%{border-color: black;}
+  10%{border-color: #e6d515;}
+  15%{border-color: black;}
+  20% {border-color: rgb(60, 230, 216);}
+  25% {border-color: black;}
+  30% {border-color: rgb(60, 230, 216);}
+  35% {border-color: black;}
+  40% {border-color: #e68815;}
+  45% {border-color: black;}
+  50% {border-color: rgb(60, 230, 216);}
+  55% {border-color: black;}
+  60% {border-color: #ca7315;}
+  65%{border-color: black;}
+  70%{border-color: rgb(60, 230, 216);}
+  75%{border-color: black;}
+  80%{border-color: #e68815;}
+  85%{border-color: black;}
+  90%{border-color: rgb(60, 230, 216);}
+  95%{border-color: rgb(20, 20, 20);}
+  100%{border-color: #e68815;}}
+
+.software-development {
+  width: 30%;
+  transform: rotateX(30deg);
+  opacity: 1;
+  left: 35%;
+  top: 35%;
+  position: absolute;
+}
+
+.software-development:hover {
+  background-image: linear-gradient(rgb(44, 182, 170), rgb(28, 136, 127));
+  border-radius: 5px;
+  opacity: 0;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher-software-development;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.software-development-animation {
+  width: 30%;
+  transform: rotateX(30deg);
+  opacity: 0;
+  left: 35%;
+  top: 35%;
+  position: absolute;
+}
+
+.software-development-animation:hover {
+  background-image: linear-gradient(rgb(44, 182, 170), rgb(28, 136, 127));
+  border-radius: 5px;
+  opacity: 1;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 20px;
+  animation-name: outline-flasher-software-development;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}

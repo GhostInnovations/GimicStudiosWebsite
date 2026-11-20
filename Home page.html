@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gimic Studios</title>
+    <link rel="icon" type="image/x-icon" href="Bin assets/GIMMICK STUDIOS FAVICON 11.png">
+
+
+    <style>
+      @font-face {
+        font-family: "Gothic Century";
+        src: url(Fonts/PressStart2P-vaV7.ttf);
+      }
+
+      
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Gothic Century';
+        background-color: black;
+        background-image: url("Arcade Background Home Screen 7.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 120vh;
+        width: 60vw;
+      }
+      
+      
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+
+      .header {
+        color: #ae1536;
+        text-align: center;
+        font-size: 2vb;
+        font-family: 'Gothic Century';
+        font-weight: bold;
+        padding: 30px;
+        transform: rotateX(30deg);
+        pointer-events: none;
+      }
+
+      .entertainment-button {
+        color: #ff4e18;
+        font-size: 10px;
+        size: 10px;
+        font-family: 'Gothic Century';
+        text-align: center;       
+        padding: 15px;
+        font-weight: 900;
+        
+        rotate: x 30deg;
+        z-index: 10;
+      }
+      
+      .entertainment-button a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 40%;
+        text-decoration: none;
+        color: #faa868;
+      }
+
+      .development-button {
+        color: #94d2bd;
+        font-size: 10px;
+        font-family: 'Gothic Century';
+        text-align: center;
+        padding:  15px;
+        font-weight: 900;
+        rotate: x 30deg;
+        z-index: 10;
+      }
+
+      .development-button a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #94d2bd;
+      }
+
+      .content-creation-button {
+        color: #ae6c21;
+        font-size: 10px;
+        font-family: 'Gothic Century';
+        text-align: center;
+        padding:  15px;
+        font-weight: 900;
+        rotate: x 30deg;
+        z-index: 10;
+      }
+
+      .content-creation-button a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #f6d92e;
+      }
+
+      .game-development {
+        color: #5CBA6EFF;
+        font-size: 10px;
+        font-family: 'Gothic Century';
+        text-align: center;
+        padding:  15px;
+        font-weight: 900;
+        rotate: x 30deg;
+        z-index: 10;
+      }
+
+      .game-development a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        
+      }
+
+      .container {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+
+      .center {
+        position: absolute;
+        top: 59%;
+        left: 49%;
+        transform: translate(-10%, -50%);
+      }
+
+    .center-header {
+      position: absolute;
+      top: 65%;
+      left: 53%;
+      transform: translate(-50%, -70%);
+    }
+
+    .center-left {
+      position: absolute;
+      top: 65%;
+      left: 40%;
+      transform: translate(-50%, -70%);
+    }
+
+    .center-right {
+      position: absolute;
+      top: 65%;
+      right: 24%;
+      transform: translate(-50%, -70%);
+    }
+
+     .center-down {
+      position: absolute;
+      top: 90%;
+      left: 53%;
+      transform: translate(-50%, -70%);
+    }
+
+    .image-transition {
+      width: 100%;
+      height: 120vh;
+      object-fit: cover;
+      opacity: 0;
+      position: absolute;
+      pointer-events: none;}
+
+    .image {
+      width: 100%;
+      height: 120vh;
+      object-fit: cover;
+      opacity: 1;
+      position: absolute;
+      pointer-events: none;}
+
+    .mask-and-record {
+      width: 15%;
+      opacity: 1;
+      position: absolute;
+      top: 20%;
+      left: 48%;
+      transform: rotateX(30deg);
+      
+    }
+
+    .mask-and-record-link {
+      position: absolute;
+      top: 48%;
+      left: 39%;
+      width: 15%;
+      transform: rotateX(30deg);
+      z-index: 10;
+    }
+
+    .mask-and-record-link img {
+      width: 100%;
+    }
+
+
+    .mask-and-record-link img:hover {
+      background-image: linear-gradient(#2e0e05, #e04317);
+      background-size: auto;
+      border-style: solid;
+      border-width: 10px;
+      border-radius: 20px;
+      animation-name: outline-flasher;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes outline-flasher {
+      0%{border-color: #faa868;}
+      5%{border-color: black;}
+      10%{border-color: #faa868;}
+      15%{border-color: black;}
+      20% {border-color: #faa868;}
+      25% {border-color: black;}
+      30% {border-color: #faa868;}
+      35% {border-color: black;}
+      40% {border-color: #faa868;}
+      45% {border-color: black;}
+      50% {border-color: #faa868;}
+      55% {border-color: black;}
+      60% {border-color: #faa868;}
+      65%{border-color: black;}
+      70%{border-color: #faa868;}
+      75%{border-color: black;}
+      80%{border-color: #faa868;}
+      85%{border-color: black;}
+      90%{border-color: #faa868;}
+      95%{border-color: black;}
+      100%{border-color: #faa868;}
+    }
+
+    .keyboard-mouse-graphic {
+      width: 13%;
+      opacity: 1;
+      position: absolute;
+      top: 43%;
+      left: 25%;
+      transform: rotateX(30deg);
+    }
+
+    .keyboard-mouse-graphic-link {
+      width: 13%;
+      opacity: 1;
+      position: absolute;
+      top: 54.5%;
+      left: 30%;
+      transform: rotateX(20deg);
+      z-index: 9;
+    }
+
+    .keyboard-mouse-graphic-link img {
+      width: 100%;
+    }
+
+    .keyboard-mouse-graphic-link:hover {
+      z-index: 11;
+    }
+
+    .keyboard-mouse-graphic-link img:hover {
+      background-image: linear-gradient( #09100e, #2BCDA9FF);
+      background-size: auto;
+      border-style: solid;
+      border-width: 10px;
+      border-radius: 20px;
+      animation-name: outline-flasher;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    .playbutton-graphic {
+      width: 12.5%;
+      opacity: 1;
+      position: absolute;
+      top: 56.5%;
+      right: 29.7%;
+      transform: rotateX(30deg);
+    }
+
+    .playbutton-graphic-link {
+      width: 12.5%;
+      opacity: 1;
+      position: absolute;
+      top: 54.5%;
+      right: 23.7%;
+      transform: rotateX(20deg);
+      z-index: 10;
+    }
+
+    .playbutton-graphic-link img {
+      width: 100%;
+    }
+
+    .playbutton-graphic-link img:hover {
+      background-image: linear-gradient(rgb(28, 16, 4), rgb(182, 139, 10));
+      background-size: auto;
+      border-style: solid;
+      border-width: 10px;
+      border-radius: 20px;
+      animation-name: outline-flasher;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    .game-controller-and-gear {
+      width: 15%;
+      opacity: 1;
+      position: absolute;
+      top: 65%;
+      right: 39%;
+      transform: rotateX(20deg);
+      z-index: 10;
+    }
+
+    .game-controller-and-gear-link {
+      width: 15%;
+      opacity: 1;
+      position: absolute;
+      top: 66.5%;
+      right: 34%;
+      transform: rotateX(20deg);
+      z-index: 10;
+    }
+
+    .game-controller-and-gear-link img {
+      width: 100%;
+    }
+
+    .game-controller-and-gear-link img:hover {
+      background-image: linear-gradient( rgb(8, 16, 9), rgb(64, 125, 75));
+      background-size: auto;
+      border-style: solid;
+      border-width: 10px;
+      border-radius: 20px;
+      animation-name: outline-flasher;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    
+    #Main-Menu-container{
+      opacity: 0;
+      pointer-events: none;
+      
+    }
+
+    #Animation-container {
+      opacity: 1;
+
+    }
+
+    @keyframes deactivate-pointer{
+      from {pointer-events: none;}
+      to {pointer-events: auto;}
+    }
+
+    @keyframes fade-out {
+      from {opacity: 1;}
+      to {opacity: 0;}
+    }
+
+    @keyframes fade-in {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .main-menu-content {
+      width: 99vw;
+      height: 118vh;
+      size: 100vb;
+      object-fit: cover;
+      position: relative;
+    }
+
+    .intro-screen {
+      width: 100%;
+      height: 120vh;
+      object-fit: cover;
+      opacity: 1;
+      position: absolute;
+    }
+
+    .arcade-screen-pointer{
+      cursor: pointer;
+    }
+
+    .screen-size {
+      width: 100vmin;
+      height: 61vmin;
+      min-width: 340px;
+      min-height: 203px;
+      position: absolute;
+      clip-path: polygon(10% 0.4%, 89.22% 0.4%, 98% 79.5%, 2% 79.5%);
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      left: 52.5vw;
+      top: 81.8vh;
+      cursor: pointer;
+    }
+
+    .image-mobile {
+      visibility: hidden;
+      position: absolute;
+    }
+
+
+
+    @media (max-width: 375px) {
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Gothic Century';
+          background-color: black;
+          background-image: url("Arcade Background Home Screen (width 320px) Mobile screen.png");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 120vh;
+          width: 60vw;
+        }
+
+        .image-mobile {
+          width: 100%;
+          height: 120vh;
+          object-fit: cover;
+          opacity: 1;
+          position: absolute;
+          pointer-events: none;
+          visibility: visible;
+          position: absolute;
+        }
+
+        .image {
+          visibility: hidden;
+        }
+
+        .mask-and-record {
+  
+          opacity: 1;
+          position: absolute;
+          transform: rotateX(30deg);
+        }
+
+        .mask-and-record-link {
+          position: absolute;
+          top: 560px;
+          left: 70px;
+          width: 100px;
+          transform: rotateX(30deg);
+          height: auto;
+          z-index: 10;
+        }
+
+        .mask-and-record-link img {
+          max-width: 100%;
+        }
+
+
+        .mask-and-record-link img:hover {
+          background-image: linear-gradient(#2e0e05, #e04317);
+          background-size: auto;
+          border-style: solid;
+          border-width: 10px;
+          border-radius: 20px;
+          animation-name: outline-flasher;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
+
+        .game-controller-and-gear {
+          width: 15%;
+          opacity: 1;
+          position: absolute;
+          top: 65%;
+          right: 39%;
+          transform: rotateX(20deg);
+          z-index: 10;
+        }
+
+        .game-controller-and-gear-link {
+          width: 35%;
+          opacity: 1;
+          position: absolute;
+          top: 66.5%;
+          right: 34%;
+          transform: rotateX(20deg);
+          z-index: 10;
+        }
+
+        .game-controller-and-gear-link img {
+          width: 100%;
+        }
+        
+        .keyboard-mouse-graphic {
+          width: 13%;
+          opacity: 1;
+          position: absolute;
+          top: 43%;
+          left: 25%;
+          transform: rotateX(30deg);
+        }
+
+        .keyboard-mouse-graphic-link {
+          width: 25%;
+          opacity: 1;
+          position: absolute;
+          top: 60%;
+          left: 5%;
+          transform: rotateX(20deg);
+          z-index: 9;
+        }
+
+        .keyboard-mouse-graphic-link img {
+          width: 100%;
+        }
+
+        .keyboard-mouse-graphic-link:hover {
+          z-index: 11;
+        }
+
+        .keyboard-mouse-graphic-link img:hover {
+          background-image: linear-gradient( #09100e, #2BCDA9FF);
+          background-size: auto;
+          border-style: solid;
+          border-width: 10px;
+          border-radius: 20px;
+          animation-name: outline-flasher;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
+
+        .playbutton-graphic {
+          width: 12.5%;
+          opacity: 1;
+          position: absolute;
+          top: 56.5%;
+          right: 29.7%;
+          transform: rotateX(30deg);
+        }
+
+        .playbutton-graphic-link {
+          width: 25%;
+          opacity: 1;
+          position: absolute;
+          top: 60%;
+          right: 2%;
+          transform: rotateX(20deg);
+          z-index: 10;
+        }
+
+        .playbutton-graphic-link img {
+          width: 100%;
+        }
+
+        .playbutton-graphic-link img:hover {
+          background-image: linear-gradient(rgb(28, 16, 4), rgb(182, 139, 10));
+          background-size: auto;
+          border-style: solid;
+          border-width: 10px;
+          border-radius: 20px;
+          animation-name: outline-flasher;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
+
+        .game-controller-and-gear {
+          width: 15%;
+          opacity: 1;
+          position: absolute;
+          top: 65%;
+          right: 39%;
+          transform: rotateX(20deg);
+          z-index: 10;
+        }
+
+        .game-controller-and-gear-link {
+          width: 40%;
+          opacity: 1;
+          position: absolute;
+          top: 66.5%;
+          right: 14%;
+          transform: rotateX(20deg);
+          z-index: 10;
+        }
+
+        .game-controller-and-gear-link img {
+          width: 100%;
+        }
+
+        .game-controller-and-gear-link img:hover {
+          background-image: linear-gradient( rgb(8, 16, 9), rgb(64, 125, 75));
+          background-size: auto;
+          border-style: solid;
+          border-width: 10px;
+          border-radius: 20px;
+          animation-name: outline-flasher;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
+
+        .screen-size {
+          width: 100vmin;
+          height: 61vmin;
+          min-width: 340px;
+          min-height: 203px;
+          position: absolute;
+          clip-path: polygon(10% 0.4%, 89.22% 0.4%, 98% 79.5%, 2% 79.5%);
+          opacity: 0;
+          transform: translate(-50%, -50%);
+          left: 52.5vw;
+          top: 81.8vh;
+          cursor: pointer;
+        }
+
+        .main-menu-content {
+          width: 99vw;
+          height: 118vh;
+          size: 100vb;
+          object-fit: cover;
+          position: absolute;
+        }
+
+        .header {
+          color: #ae1536;
+          
+          font-size: 8px;
+          font-family: 'Gothic Century';
+          font-weight: bold;
+          padding: 30px;
+          transform: rotateX(30deg);
+          pointer-events: none;
+        }
+
+        .center-header {
+          position: absolute;
+          top: 67%;
+          left: 43.5%;
+          transform: translate(-32%, -70%);
+        }
+
+      }
+    </style>
+  </head>
+  
+  <body>
+    <img src="Home Screen plane.png" alt="Arcade Screen Colour" class="image">
+    <img src="Home Screen plane (320px).png" alt="Arcade Screen Colour Mobile" class="image-mobile"> 
+    <img src="Bin assets/Joystick (Stationary).png" alt="Joystick" id="stationary-joystick" class="image">
+    <img src="Bin assets/Button (Stationary).png" alt="Button" id="stationary-button" class="image">
+    
+    <img src="Bin assets/Button (Pressed Down).png" alt="Button Pressed" class="image-transition" id="button-pressed-down">
+    <img src="Bin assets/Joystick animation up.png" alt="Joystick Up" class="image-transition" id="move-up-joystick">
+    <img src="Bin assets/Joystick animation down.png" alt="Joystick Down" class="image-transition" id="move-down-joystick">
+    
+    <img src="Bin assets/Joystick animation left.png" alt="Joystick Left" class="image-transition" id="move-left-joystick">
+    <img src="Bin assets/Joystick animation right.png" alt="Joystick Right" class="image-transition" id="move-right-joystick">
+    
+    <div class="animation-container" id="Animation-container">
+      
+      <div class="intro-screen">
+        <video muted playsinline autoplay class="intro-screen">
+          <source src="Video/Gimic Studio Intro 9.webm" type="video/webm">
+        </video>
+        <div class="screen-size" onclick="skip_intro()"></div>
+      </div>
+
+     
+    </div>
+    
+    <div class="container">
+      <div class="main-menu-container main-menu-content" id="Main-Menu-container">
+        
+        <audio id="retro-blip" muted playsinline autoplay> 
+          <source src="Audio/retro-blip.mp3" type="audio/mp3">
+          <source src="Audio/retro-blip.ogg" type="audio/ogg">
+        </audio>
+
+        <audio id="retro-button" playsinline>
+          <source src="Audio/retro-video-game-coin-pickup.mp3" type="audio/mp3">
+          <source src="Audio/retro-video-game-coin-pickup.ogg" type="audio/ogg">
+        </audio>
+
+        <div class="center-header header">Gimic Studios</div>
+
+        <a href="#" class="mask-and-record-link"  onmouseover="Joystick_up()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_entertainment()">
+          <img src="Mask.png" alt="Entertainment" class="mask-and-record">
+        </a>
+        <a href="#" class="keyboard-mouse-graphic-link" onmouseover="Joystick_left()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_development()">      
+          <img src="Keyboard and mouse.png" alt="Development" class="keyboard-mouse-graphic">
+        </a>
+        <a href="#" class="playbutton-graphic-link" onmouseover="Joystick_right()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_content_creation()">
+          <img src="playbutton.png" alt="Content Creation" class="playbutton-graphic">
+        </a>
+        <a href="#" class="game-controller-and-gear-link" onmouseover="Joystick_down()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_game_developement()">
+          <img src="Gaming controller and Gear.png" alt="Games Development" class="game-controller-and-gear">
+        </a>
+      </div>
+
+     <script>
+
+      const hover_sound = document.getElementById('retro-blip'); 
+       
+
+      function Joystick_up() {
+        hover_sound.muted = false;
+        hover_sound.play();
+        document.getElementById('move-up-joystick').style.opacity = 1;
+        document.getElementById('stationary-joystick').style.opacity = 0;
+        }
+      
+      function Joystick_down() {
+        hover_sound.muted = false;
+        hover_sound.play();
+        document.getElementById('move-down-joystick').style.opacity = 1;
+        document.getElementById('stationary-joystick').style.opacity = 0;
+        }
+
+      function Joystick_left() {
+        hover_sound.muted = false;
+        hover_sound.play();
+        stationary_joystick = document.getElementById('stationary-joystick').style.opacity = 0
+        joystick_left = document.getElementById('move-left-joystick').style.opacity = 1
+      }
+
+      function Joystick_stationary() {
+        hover_sound.muted = true;
+        joystick_up = document.getElementById('move-up-joystick').style.opacity = 0;
+        stationary_joystick = document.getElementById('stationary-joystick').style.opacity = 1;
+        joystick_left = document.getElementById('move-left-joystick').style.opacity = 0;
+        joystick_right = document.getElementById('move-right-joystick').style.opacity = 0;
+        document.getElementById('move-down-joystick').style.opacity = 0;
+      }
+
+      function Joystick_right() {
+        hover_sound.muted = false;
+        hover_sound.play();
+        stationary_joystick = document.getElementById('stationary-joystick').style.opacity = 0
+        joystick_right = document.getElementById('move-right-joystick').style.opacity = 1
+      }
+
+      function Stationary_button() {
+        button_stationary = document.getElementById('stationary-button').style.opacity = 1
+        button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 0
+      }
+
+      function Pressed_down_button_entertainment() {
+        let button_sound = document.getElementById('retro-button');
+        button_sound.play();
+
+        setTimeout(() => {
+          window.location.href = "Entertainment.html";
+        }, 500);
+
+        button_stationary = document.getElementById('stationary-button').style.opacity = 0
+        button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 1
+      }
+
+      function Pressed_down_button_development() {
+        let button_sound = document.getElementById('retro-button');
+        button_sound.play();
+
+        setTimeout(() => {
+          window.location.href = "Development Page.html";
+        }, 500);
+
+        button_stationary = document.getElementById('stationary-button').style.opacity = 0
+        button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 1
+      }      
+
+      
+      function Pressed_down_button_content_creation() {
+        let button_sound = document.getElementById('retro-button');
+        button_sound.play();
+
+        setTimeout(() => {
+          window.location.href = "Content Creation Page.html";
+        }, 500);
+
+        button_stationary = document.getElementById('stationary-button').style.opacity = 0
+        button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 1
+      }  
+      
+      function Pressed_down_button_game_developement() {
+        let button_sound = document.getElementById('retro-button');
+        button_sound.play();
+
+        setTimeout(() => {
+          window.location.href = "Game Development.html";
+        }, 500);
+
+        button_stationary = document.getElementById('stationary-button').style.opacity = 0
+        button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 1
+      }
+
+
+
+      const animation_into = document.getElementById("Animation-container");
+      const menu = document.getElementById("Main-Menu-container");
+
+
+      if (localStorage.getItem("intro_skipped") === "true") {
+    
+          animation_into.style.display = "none"; 
+          menu.style.opacity = "1";
+          menu.style.pointerEvents = "auto";
+      } else {
+    
+          animation_into.animate([{opacity: 1}, {opacity: 0}], {
+              duration: 950, fill: "forwards", delay: 10000
+          });
+
+          menu.animate([{opacity: 0, pointerEvents: "none"}, {opacity: 1, pointerEvents: "auto"}], {
+              duration: 350, fill: "forwards", delay: 11000
+          });
+      }
+
+
+      function skip_intro() {
+          localStorage.setItem("intro_skipped", "true"); 
+          
+          animation_into.style.opacity = "0";
+          animation_into.style.pointerEvents = "none";
+          menu.style.opacity = "1";
+          menu.style.pointerEvents = "auto";
+          
+
+          animation_into.animate([{opacity: 1, pointerEvents: "auto",},{opacity: 0, pointerEvents: "none",}],{duration: 950, fill: "forwards"})
+          menu.animate([{opacity: 0, pointerEvents: "none"},{opacity: 1, pointerEvents: "auto",}],{duration: 350, fill: "forwards"})
+
+          const button_stationary = document.getElementById('stationary-button')
+          const button_pressed_down = document.getElementById('button-pressed-down')
+
+          button_stationary.animate([{opacity: 1,}, {opacity: 0,}],{duration: 105})
+          button_pressed_down.animate([{opacity: 0,},{opacity: 1,}],{duration: 90})
+      }
+
+
+    </script>
+
+  </body>
+</html>

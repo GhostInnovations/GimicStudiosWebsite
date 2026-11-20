@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <title>Content Creation</title>
+    <link rel="icon" type="image/x-icon" href="Bin assets/GIMMICK STUDIOS FAVICON 12.png">
+    
+    <style>
+      @font-face {
+        font-family: "Gothic Century";
+        src: url(Fonts/century-gothic-bold.ttf);
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Gothic Century';
+        background-color: black;
+        background-image: url("Content Creation.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;}
+
+      .header {
+        border-width: auto;
+        background-color: #f3932c;
+        padding: 10px;
+      }
+
+      .logo {
+        color: #ae1536;
+        font-size: 20px;
+        text-align: left;  
+        font-weight: 900px;
+      }
+
+     .container {
+          position: relative;
+          text-align: center;
+          color: white;}
+
+            .image-transition {
+              width: 100%;
+              opacity: 0;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+            }
+
+            .image {
+              width: 100%;
+              opacity: 1;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+            }
+
+            .content-creation {
+              text-align: center;
+              font-size: 60px;
+              color: white;
+              font-weight: 900px;
+              pointer-events: none;
+            }
+
+            #button-animation-pressed-down {
+              position: absolute;
+              width: 100%;
+              top: 0px;
+              left: 0px;
+              opacity: 0;
+              animation-name: pressed-down;
+              animation-duration: 1.5s;}
+
+       
+            #button-animation-stationary {
+                position: absolute;
+                width: 100%;
+                top: 0px;
+                left: 0px;
+                opacity: 1;   
+                animation-name: stationary;
+                animation-delay: 4s;}
+
+            @keyframes pressed-down {
+              0% {opacity: 1;}
+            }
+
+            
+            @keyframes stationary {
+              0% {opacity: 0;}   
+            }
+
+
+            html{
+            scroll-behavior: smooth;
+          }
+
+          p {
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            font-size: 20px;
+            pointer-events: none;
+          }
+
+          #section1 {
+            text-align: center;
+          }
+
+          #section2 {
+            background-color: #f3932c;
+            text-align: center;
+            color: white;
+            object-fit: cover;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            transform: translate(0vw,13vh);
+          }
+
+          #section25 {
+            background-color: #c57827;
+            object-fit: cover;
+            transform: translate(0vw, 13vh);
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+          }
+
+          input[type=text] {
+            background-color: rgb(237, 237, 237);
+            display: inline;
+            font-family: 'Gothic Century';
+            font-weight: 20;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            height: 25px;
+            width: 250px;
+            outline: none;
+          }
+
+          input[type=submit] {
+            border: solid;
+            width: 15%;
+            padding: 10px;
+            font-weight: bold;
+            background-color: white;
+            color: #f3932c;
+            margin: 8px 0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            left: 14%;
+            transition: all 1s;
+          }
+
+          input[type=submit]:hover {
+            background-color: #ae1536;
+            border-radius: 18px;
+            transform: scale(1.1);
+          }
+
+          input[type=button] {
+            border: solid;
+            width: 15%;
+            padding: 10px;
+            font-weight: bold;
+            color: white;
+            margin: 8px 0;
+            background: linear-gradient(rgb(0, 170, 255));
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            transition: all 0.4s;
+          }
+
+          input[type=button]:hover {
+            transform: scale(1.1);
+            border-radius: 35px;
+            background: linear-gradient(rgb(18, 174, 252),rgb(51, 187, 255));
+          }
+
+          input [type=checkbox] {
+            border: none;
+            outline: none;
+
+          }
+
+          textarea {
+            resize: none;
+            display: inline;
+            font-family: 'Gothic Century';
+            border-radius: 6px;
+            outline: none;
+            border: none;
+            background-color: rgb(237, 237, 237);
+          }
+
+          input[type=email] {
+            background-color: rgb(237, 237, 237);
+            display: inline;
+            font-family: 'Gothic Century';
+            font-weight: 100;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            height: 25px;
+            width: 250px;
+            outline: none;
+          }
+
+         input[type=tel] {
+            background-color: rgb(237, 237, 237);
+            display: inline;
+            font-family: 'Gothic Century';
+            font-weight: 100;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            height: 25px;
+            width: 250px;
+            outline: none;
+         }
+
+    </style>
+    
+    <body>
+      
+      <div class="main" id="section1">
+        <p class="content-creation">Content Creation</p>
+
+        <p> Effectively managing your social media requires concise content strategy, consistency, and endless creativity.
+           GIMIC Studios can do all of this for you across all social media platforms,
+           Facebook, Instagram, Linkedin, Tik Tok and more. GIMIC can help take your brand to the next level by employing creative and powerful social media strategies
+        <br><br>
+        Through deep research, insights, and industry experience, GIMIC can plan, deploy and manage powerful social media marketing strategies bespoke to your brand.
+         A strong social media strategy can reinforce your brand, create consumer engagement, and boost sales. From locally managed businesses to global retailers,
+         we can provide you with a custom social media marketing strategy that provides impressive results. <br><br>
+        We consistently create engaging, visual, cohesively branded content suited to your business's goals, 
+        branding, and consumer profiles. By consistently posting and scheduling at optimal times of the day, we can ensure maximum engagement with your desired audiences.
+         Having a branded social media profile with consistent posting can boost traffic and engagement and show a professional, cohesive face to your brand, building trust and
+          authority within your industry. <br><br>
+        ARE YOU just starting your social media journey? GIMIC will set up and brand your social media channels, creating a professional online 
+        presence that attracts your target audience. We'll craft engaging profiles, optimise your pages for discoverability and provide you with the fundamentals 
+        needed to get started on social media. <br><br>
+        GIMIC provides in-depth social media reports that give you the insight you need to grow your online presence. We'll track your progress, highlight key metrics,
+         deliver demographic breakdowns and identify key areas for improvement. With our clear and actionable social media analytics. <br><br>
+        our community management services nurture your online community, fostering authentic engagement and building lasting relationships with your audience.
+       We'll stay on top of incoming messages and comments, connect with influencers, and create meaningful interactions that build trust and increase 
+       your brand's visibility. <br> <br>
+        Collaboration and creativity are key pillars for our team.
+        <br><br>
+        Here at GIMIC STUDIOS we support a flexible approach to work. Whether working from home, 
+        in our custom-designed studio space or a mix of both, our most valued commodity is creativity this 
+        is achieved by producing an environment where everyone feels welcomed, respected and empowered to contribute and thrive; 
+        providing you with all the benefits, tools, infrastructure and flexibility that you need to be your most creative and fulfilled self.</p>
+      </div>
+
+          
+      <div class="main" id="section25" style="color: white; text-align: center;">
+        Our studio is situated in Middlesbrough, If you need to contact us, would like to find out more or if you would like to join our team please fill out our form below
+        <br></div>
+
+      <div class="main" id="section2">
+         <form action="" method="post">
+            <br>
+            <h1 style="pointer-events: none;">CONTACTS</h1> 
+            
+            <br><label for="Name">Name</label> <br>
+            <input type="text"> <br> <br>
+            
+            <label for="Company Name">Company Name</label>  <br>
+            <input type="text"> <br><br>
+
+            <label for="Phone Number" >
+               Phone Number</label>  <br>
+            <input type="tel" pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$" required autocomplete="tel"> <br><br>
+
+            <label for="eml">Email Address</label> <br>
+            <input type="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+            required> <br><br>
+
+            <label for="Questions">Questions</label><br>
+            <textarea name="Questions" id="Questions" cols="30" rows="10"></textarea><br>
+
+            <label for="Do you consent">
+               This is consent to communicate
+               <input type="checkbox" name="Do you consent" id="Do you consent" value="Do you consent">
+               <span></span>
+            </label>
+            <br><br>
+
+            <input type="submit" value="submit"><br> <br>
+          </form>
+      </div>
+
+    </body>
+
+</html>

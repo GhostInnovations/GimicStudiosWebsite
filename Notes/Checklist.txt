@@ -1,0 +1,7 @@
+Checklist:
+
+⦁	Send form to email in a secure manner.
+⦁	Security.
+⦁	Changing phone screen size with an appropriate screen size.
+⦁	Make better design for arcade screen and make it not "Copyright Property".
+⦁	Put CSS into Organised CSS file.

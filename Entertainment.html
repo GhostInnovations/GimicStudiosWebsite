@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Entertainment</title>
+        <link rel="icon" type="image/x-icon" href="Bin assets/GIMMICK STUDIOS FAVICON 11.png">
+        <link rel="stylesheet" href="CSS/Arcade.css">
+    </head>
+
+    <body>
+
+      
+      <img src="Plane.png" alt="Space Background" class="image">
+
+      <img src="Bin assets/Arcade Background screen medium Joystick (Stationary).png" alt="Joystick" class="image" id="stationary-joystick">
+      <img src="Bin assets/Arcade Background screen medium Joystick Animation Up.png" alt="Joystick" class="image-transition" id="move-up-joystick">
+      <img src="Bin assets/Arcade Background screen medium Joystick Animation Down.png" alt="Joystick" class="image-transition" id="move-down-joystick">
+      <img src="Bin assets/Arcade Background screen medium Joystick Animation Midway Down.png" alt="Joystick" class="image-transition" id="move-diagonally-down-joystick">
+
+      <img src="Bin assets/Arcade Background screen medium Button (Stationary).png" alt="Button"  id="button-animation-stationary">
+      <img src="Bin assets/Arcade Background screen medium Button (Pressed Down).png" alt="Button" id="button-animation-pressed-down">
+
+       <div class="container">
+
+          <audio id="retro-blip" muted playsinline autoplay> 
+            <source src="Audio/retro-blip.mp3" type="audio/mp3">
+            <source src="Audio/retro-blip.ogg" type="audio/ogg">
+          </audio>
+
+          <audio id="retro-button" playsinline>
+            <source src="Audio/retro-video-game-coin-pickup.mp3" type="audio/mp3">
+            <source src="Audio/retro-video-game-coin-pickup.ogg" type="audio/ogg">
+          </audio>
+          
+          <div class="screen">
+            <a href="#" onmouseover="Joystick_up()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_film()" class="film-icon-link">
+              <img src="Film Icon.png" alt="film icon" class="film-icon"> <img src="film icon key-animation.png" alt="film icon" class="film-icon2"></a>
+            
+            <a href="#" onmouseover="Joystick_down()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_music()">
+              <img src="Music vinyl.png" alt="music icon" class="music-icon"> 
+              <video class="music-icon-animation" muted playsinline loop autoplay>
+                <source src="Vinyl Animation0001-0005.webm" class="music-icon-animation"></video></a>
+                
+            <a href="#" onmouseover="Joystick_diagonally_down()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_back()">
+              <img src="Back Icon.png" alt="Back to" class="back-icon"></a>
+          </div>
+          
+
+              <script>
+                 const hover_sound = document.getElementById('retro-blip'); 
+
+                function Joystick_down() {
+                  hover_sound.muted = false;
+                  hover_sound.play();
+                  joystick_down = document.getElementById('move-down-joystick').style.opacity = 1
+                  stationary_joystick = document.getElementById('stationary-joystick').style.opacity = 0}
+
+                function Joystick_up() {
+                  hover_sound.muted = false;
+                  hover_sound.play();
+                  joystick_up = document.getElementById('move-up-joystick').style.opacity = 1
+                  stationary_joystick = document.getElementById('stationary-joystick').style.opacity = 0}
+                
+                function Joystick_stationary() {
+                  hover_sound.muted = false;
+                  hover_sound.play();
+                  joystick_down = document.getElementById('move-down-joystick').style.opacity = 0
+                  joystick_up = document.getElementById('move-up-joystick').style.opacity = 0
+                  joystick_down = document.getElementById('move-diagonally-down-joystick').style.opacity = 0
+                  stationary_joystick = document.getElementById('stationary-joystick').style.opacity = 1}
+
+                function Stationary_button() {
+                  button_stationary = document.getElementById('stationary-button').style.opacity = 1
+                  button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 0
+                }
+
+                function Joystick_diagonally_down() {
+                  hover_sound.muted = false;
+                  hover_sound.play();
+                  joystick_down = document.getElementById('move-diagonally-down-joystick').style.opacity = 1
+                  stationary_joystick = document.getElementById('stationary-joystick').style.opacity = 0}
+
+                function Pressed_down_button_film() {
+                  let button_sound = document.getElementById('retro-button');
+                  button_sound.play();
+
+                  setTimeout(() => {
+                    window.location.href = "Film page.html";
+                  }, 500);
+
+                  button_stationary = document.getElementById('stationary-button').style.opacity = 0
+                  button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 1
+                }      
+
+                function Pressed_down_button_music() {
+                  let button_sound = document.getElementById('retro-button');
+                  button_sound.play();
+
+                  setTimeout(() => {
+                    window.location.href = "Music page.html";
+                  }, 500);
+
+                  button_stationary = document.getElementById('stationary-button').style.opacity = 0
+                  button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 1
+                }      
+
+                function Pressed_down_button_back() {
+                  let button_sound = document.getElementById('retro-button');
+                  button_sound.play();
+
+                  setTimeout(() => {
+                    window.location.href = "Home page 2.html";
+                  }, 500);
+
+                  button_stationary = document.getElementById('stationary-button').style.opacity = 0
+                  button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 1
+                }      
+
+              </script>
+
+       </div>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gimic Studios</title>
+        <link rel="icon" type="image/x-icon" href="Bin assets/GIMMICK STUDIOS FAVICON 11.png">
+        <link rel="stylesheet" href="CSS/Arcade.css">
+    </head>
+
+    <body> 
+      <img src="plane 2.png" alt="" class="image">
+      <img src="Bin assets/Arcade Background screen medium Joystick (Stationary).png" alt="Joystick" class="image" id="stationary-joystick">
+      <img src="Bin assets/Arcade Background screen medium Joystick Animation Up.png" alt="Joystick" class="image-transition" id="move-up-joystick">
+      <img src="Bin assets/Arcade Background screen medium Joystick Animation Down.png" alt="Joystick" class="image-transition" id="move-down-joystick">
+      <img src="Bin assets/Arcade Background screen medium Joystick Animation Right.png" alt="Joystick" class="image-transition" id="move-right-joystick">
+      <img src="Bin assets/Arcade Background screen medium Joystick Animation Left.png" alt="Joystick" class="image-transition" id="move-left-joystick">
+
+      <img src="Bin assets/Arcade Background screen medium Button (Stationary).png" alt="Button"  id="button-animation-stationary">
+      <img src="Bin assets/Arcade Background screen medium Button (Pressed Down).png" alt="Button" id="button-animation-pressed-down">
+
+      <div class="screen-home">
+        
+        <audio id="retro-blip" muted playsinline autoplay> 
+          <source src="Audio/retro-blip.mp3" type="audio/mp3">
+          <source src="Audio/retro-blip.ogg" type="audio/ogg">
+        </audio>
+
+        <audio id="retro-button" playsinline>
+          <source src="Audio/retro-video-game-coin-pickup.mp3" type="audio/mp3">
+          <source src="Audio/retro-video-game-coin-pickup.ogg" type="audio/ogg">
+        </audio>
+
+        <div class="center-header header">Gimic Studios</div>
+
+        <a href="#" class="mask-and-record-link"  onmouseover="Joystick_up()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_entertainment()">
+          <img src="Mask.png" alt="Entertainment" class="mask-and-record">
+        </a>
+        <a href="#" class="keyboard-mouse-graphic-link" onmouseover="Joystick_left()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_development()">      
+          <img src="Keyboard and mouse.png" alt="Development" class="keyboard-mouse-graphic">
+        </a>
+        <a href="#" class="playbutton-graphic-link" onmouseover="Joystick_right()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_content_creation()">
+          <img src="playbutton.png" alt="Content Creation" class="playbutton-graphic">
+        </a>
+        <a href="#" class="game-controller-and-gear-link" onmouseover="Joystick_down()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_game_developement()">
+          <img src="Gaming controller and Gear.png" alt="Games Development" class="game-controller-and-gear">
+        </a>
+      </div>
+
+        <script>
+            const hover_sound = document.getElementById('retro-blip'); 
+
+            function Joystick_down() {
+                hover_sound.muted = false;
+                hover_sound.play();
+                joystick_down = document.getElementById('move-down-joystick').style.opacity = 1
+                stationary_joystick = document.getElementById('stationary-joystick').style.opacity = 0}
+
+            function Joystick_up() {
+                hover_sound.muted = false;
+                hover_sound.play();
+                joystick_up = document.getElementById('move-up-joystick').style.opacity = 1
+                stationary_joystick = document.getElementById('stationary-joystick').style.opacity = 0}
+
+            function Joystick_right() {
+                hover_sound.muted = false;
+                hover_sound.play();
+                joystick_up = document.getElementById('move-right-joystick').style.opacity = 1
+                stationary_joystick = document.getElementById('stationary-joystick').style.opacity = 0}
+
+            function Joystick_left() {
+                hover_sound.muted = false;
+                hover_sound.play();
+                joystick_up = document.getElementById('move-left-joystick').style.opacity = 1
+                stationary_joystick = document.getElementById('stationary-joystick').style.opacity = 0}
+            
+            function Joystick_stationary() {
+                hover_sound.muted = false;
+                hover_sound.play();
+                joystick_down = document.getElementById('move-down-joystick').style.opacity = 0
+                joystick_up = document.getElementById('move-up-joystick').style.opacity = 0
+                joystick_right = document.getElementById('move-right-joystick').style.opacity = 0
+                joystick_left = document.getElementById('move-left-joystick').style.opacity = 0
+                stationary_joystick = document.getElementById('stationary-joystick').style.opacity = 1}
+
+            function Stationary_button() {
+                button_stationary = document.getElementById('stationary-button').style.opacity = 1
+                button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 0
+            }
+
+            function Pressed_down_button_film() {
+                let button_sound = document.getElementById('retro-button');
+                button_sound.play();
+
+                setTimeout(() => {
+                window.location.href = "Film page.html";
+                }, 500);
+
+                button_stationary = document.getElementById('stationary-button').style.opacity = 0
+                button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 1
+            }      
+
+            function Pressed_down_button_music() {
+                let button_sound = document.getElementById('retro-button');
+                button_sound.play();
+
+                setTimeout(() => {
+                window.location.href = "Music page.html";
+                }, 500);
+
+                button_stationary = document.getElementById('stationary-button').style.opacity = 0
+                button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 1
+            }      
+
+            function Stationary_button() {
+                button_stationary = document.getElementById('stationary-button').style.opacity = 1
+                button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 0
+            }
+
+            function Pressed_down_button_entertainment() {
+                let button_sound = document.getElementById('retro-button');
+                button_sound.play();
+
+                setTimeout(() => {
+                window.location.href = "Entertainment.html";
+                }, 500);
+
+                button_stationary = document.getElementById('stationary-button').style.opacity = 0
+                button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 1
+            }
+
+            function Pressed_down_button_development() {
+                let button_sound = document.getElementById('retro-button');
+                button_sound.play();
+
+                setTimeout(() => {
+                window.location.href = "Development Page.html";
+                }, 500);
+
+                button_stationary = document.getElementById('stationary-button').style.opacity = 0
+                button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 1
+            }      
+
+            
+            function Pressed_down_button_content_creation() {
+                let button_sound = document.getElementById('retro-button');
+                button_sound.play();
+
+                setTimeout(() => {
+                window.location.href = "Content Creation Page.html";
+                }, 500);
+
+                button_stationary = document.getElementById('stationary-button').style.opacity = 0
+                button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 1
+            }  
+            
+            function Pressed_down_button_game_developement() {
+                let button_sound = document.getElementById('retro-button');
+                button_sound.play();
+
+                setTimeout(() => {
+                window.location.href = "Game Development.html";
+                }, 500);
+
+                button_stationary = document.getElementById('stationary-button').style.opacity = 0
+                button_pressed_down = document.getElementById('button-pressed-down').style.opacity = 1
+            }  
+        </script>
+
+       </div>
+    </body>
+</html>

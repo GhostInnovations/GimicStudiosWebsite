@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body { margin: 0; background: #1a1a1a; }
+
+        .screen-size {
+            /* 1. The Arcade Shape */
+            width: 100vmin;
+            height: 61vmin;
+            min-width: 340px;
+            min-height: 203px;
+            background-color: aqua;
+            clip-path: polygon(10% 0.4%, 89.22% 0.4%, 98% 79.5%, 2% 79.5%);
+            
+            /* 2. Position Container on Screen */
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            /* 3. Centering the Group */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* 4. The "Nudge" Down */
+            /* Adjust this percentage to move the text down the screen */
+      
+        }
+
+        /* The Cross Layout Wrapper */
+        .cross-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            justify-items: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .name {
+            color: black;
+            font-family: 'Courier New', Courier, monospace; /* Arcade Font Style */
+            font-weight: bold;
+            font-size: 4vmin;
+            text-transform: uppercase;
+        }
+
+        /* Position names in the grid */
+        .mike   { grid-area: 1 / 2; }
+        .terris { grid-area: 2 / 1; }
+        .argen  { grid-area: 2 / 2; color: #ff0055; text-shadow: 2px 2px 0px white; } 
+        .sam    { grid-area: 2 / 3; }
+        .spike  { grid-area: 3 / 2; }
+
+    </style>
+</head>
+<body>
+
+    <div class="screen-size">
+        <div class="cross-layout">
+            <div class="name mike">mike</div>
+            <div class="name terris">terris</div>
+            <div class="name argen">argen</div>
+            <div class="name sam">sam</div>
+            <div class="name spike">spike</div>
+        </div>
+    </div>
+
+</body>
+</html>

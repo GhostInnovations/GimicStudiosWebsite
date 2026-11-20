@@ -1,0 +1,53 @@
+WEB PROFILE
+
+Green - #5ac7c5
+
+red - #e30d0c
+
+Yellow -  #f3b202
+
+brown - #280205
+
+beige(light orange) - #f8e9ca
+
+Orange - #e86b4f
+
+Cyan  - #6cc7c0 
+
+gray turquoise - #549b92
+
+Vivid orange - #e8692d
+
+gold orange - #e5a42d
+
+Azure - #2d6f82
+
+light orange - #ffebca
+
+dark blue - #0b0935
+
+red orange - #e4340c
+
+dark orange - #f28a10
+
+retro orange - #f3942c
+
+retro light orange - #f5962d
+
+RETRO CODE:
+
+Dark blue - #05081b
+
+Light Turquoise -#d3ebe3
+
+Orange - #d8820d
+
+azure turqoize - #1a7782
+
+Vivid red - #a93612
+
+bluey - #0a9396
+
+blue light - #94d2bd
+
+Font: GOTHICB.TTF (century Gothic Bold)
