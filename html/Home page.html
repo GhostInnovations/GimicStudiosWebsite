@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Gimic Studios</title>
-    <link rel="icon" type="image/x-icon" href="Bin assets/GIMMICK STUDIOS FAVICON 11.png">
+    <link rel="icon" type="image/x-icon" href="../assets/GIMMICK STUDIOS FAVICON 11.png">
 
 
     <style>
       @font-face {
         font-family: "Gothic Century";
-        src: url(Fonts/PressStart2P-vaV7.ttf);
+        src: url(../fonts/PressStart2P-vaV7.ttf);
       }
 
       
@@ -20,7 +20,7 @@
         padding: 0;
         font-family: 'Gothic Century';
         background-color: black;
-        background-image: url("Arcade Background Home Screen 7.png");
+        background-image: url("../assets/Arcade Background Home Screen 7.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -654,23 +654,23 @@
   </head>
   
   <body>
-    <img src="Home Screen plane.png" alt="Arcade Screen Colour" class="image">
-    <img src="Home Screen plane (320px).png" alt="Arcade Screen Colour Mobile" class="image-mobile"> 
-    <img src="Bin assets/Joystick (Stationary).png" alt="Joystick" id="stationary-joystick" class="image">
-    <img src="Bin assets/Button (Stationary).png" alt="Button" id="stationary-button" class="image">
+    <img src="../assets/Home Screen plane.png" alt="Arcade Screen Colour" class="image">
+    <img src="../assets/Home Screen plane (320px).png" alt="Arcade Screen Colour Mobile" class="image-mobile"> 
+    <img src="../assets/Joystick (Stationary).png" alt="Joystick" id="stationary-joystick" class="image">
+    <img src="../assets/Button (Stationary).png" alt="Button" id="stationary-button" class="image">
     
-    <img src="Bin assets/Button (Pressed Down).png" alt="Button Pressed" class="image-transition" id="button-pressed-down">
-    <img src="Bin assets/Joystick animation up.png" alt="Joystick Up" class="image-transition" id="move-up-joystick">
-    <img src="Bin assets/Joystick animation down.png" alt="Joystick Down" class="image-transition" id="move-down-joystick">
+    <img src="../assets/Button (Pressed Down).png" alt="Button Pressed" class="image-transition" id="button-pressed-down">
+    <img src="../assets/Joystick animation up.png" alt="Joystick Up" class="image-transition" id="move-up-joystick">
+    <img src="../assets/Joystick animation down.png" alt="Joystick Down" class="image-transition" id="move-down-joystick">
     
-    <img src="Bin assets/Joystick animation left.png" alt="Joystick Left" class="image-transition" id="move-left-joystick">
-    <img src="Bin assets/Joystick animation right.png" alt="Joystick Right" class="image-transition" id="move-right-joystick">
+    <img src="../assets/Joystick animation left.png" alt="Joystick Left" class="image-transition" id="move-left-joystick">
+    <img src="../assets/Joystick animation right.png" alt="Joystick Right" class="image-transition" id="move-right-joystick">
     
     <div class="animation-container" id="Animation-container">
       
       <div class="intro-screen">
         <video muted playsinline autoplay class="intro-screen">
-          <source src="Video/Gimic Studio Intro 9.webm" type="video/webm">
+          <source src="../video/Gimic Studio Intro 9.webm" type="video/webm">
         </video>
         <div class="screen-size" onclick="skip_intro()"></div>
       </div>
@@ -682,28 +682,28 @@
       <div class="main-menu-container main-menu-content" id="Main-Menu-container">
         
         <audio id="retro-blip" muted playsinline autoplay> 
-          <source src="Audio/retro-blip.mp3" type="audio/mp3">
-          <source src="Audio/retro-blip.ogg" type="audio/ogg">
+          <source src="../audio/retro-blip.mp3" type="audio/mp3">
+          <source src="../audio/retro-blip.ogg" type="audio/ogg">
         </audio>
 
         <audio id="retro-button" playsinline>
-          <source src="Audio/retro-video-game-coin-pickup.mp3" type="audio/mp3">
-          <source src="Audio/retro-video-game-coin-pickup.ogg" type="audio/ogg">
+          <source src="../audio/retro-video-game-coin-pickup.mp3" type="audio/mp3">
+          <source src="../audio/retro-video-game-coin-pickup.ogg" type="audio/ogg">
         </audio>
 
         <div class="center-header header">Gimic Studios</div>
 
         <a href="#" class="mask-and-record-link"  onmouseover="Joystick_up()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_entertainment()">
-          <img src="Mask.png" alt="Entertainment" class="mask-and-record">
+          <img src="../assets/mask.png" alt="Entertainment" class="mask-and-record">
         </a>
         <a href="#" class="keyboard-mouse-graphic-link" onmouseover="Joystick_left()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_development()">      
-          <img src="Keyboard and mouse.png" alt="Development" class="keyboard-mouse-graphic">
+          <img src="../assets/Keyboard and mouse.png" alt="Development" class="keyboard-mouse-graphic">
         </a>
         <a href="#" class="playbutton-graphic-link" onmouseover="Joystick_right()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_content_creation()">
-          <img src="playbutton.png" alt="Content Creation" class="playbutton-graphic">
+          <img src="../assets/playbutton.png" alt="Content Creation" class="playbutton-graphic">
         </a>
         <a href="#" class="game-controller-and-gear-link" onmouseover="Joystick_down()" onmouseout="Joystick_stationary()" onclick="Pressed_down_button_game_developement()">
-          <img src="Gaming controller and Gear.png" alt="Games Development" class="game-controller-and-gear">
+          <img src="../assets/Gaming controller and Gear.png" alt="Games Development" class="game-controller-and-gear">
         </a>
       </div>
 
@@ -759,7 +759,7 @@
         button_sound.play();
 
         setTimeout(() => {
-          window.location.href = "Entertainment.html";
+          window.location.href = "../html/Entertainment.html";
         }, 500);
 
         button_stationary = document.getElementById('stationary-button').style.opacity = 0
@@ -771,7 +771,7 @@
         button_sound.play();
 
         setTimeout(() => {
-          window.location.href = "Development Page.html";
+          window.location.href = "../html/Development Page.html";
         }, 500);
 
         button_stationary = document.getElementById('stationary-button').style.opacity = 0
@@ -784,7 +784,7 @@
         button_sound.play();
 
         setTimeout(() => {
-          window.location.href = "Content Creation Page.html";
+          window.location.href = "../html/Content Creation Page.html";
         }, 500);
 
         button_stationary = document.getElementById('stationary-button').style.opacity = 0
@@ -796,7 +796,7 @@
         button_sound.play();
 
         setTimeout(() => {
-          window.location.href = "Game Development.html";
+          window.location.href = "../html/Game Development.html";
         }, 500);
 
         button_stationary = document.getElementById('stationary-button').style.opacity = 0
